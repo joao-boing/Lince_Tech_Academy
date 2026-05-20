@@ -8,6 +8,7 @@ void main()
     //Declarando as variáveis
     List<int> nums = List.generate(10, (_) => 1 + random.nextInt(101));
 
+    //imprimindo
     for(int i = 0; i < nums.length; i++)
       {
         print("Posição: $i, Valor: ${nums[i]}");
