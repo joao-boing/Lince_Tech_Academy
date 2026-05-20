@@ -6,7 +6,7 @@ void main()
     Random random = new Random();
 
     //Declarando as variáveis
-    List<int> nums = List.generate(50, (_) => random.nextInt(16));
+    final List<int> nums = List.generate(50, (_) => random.nextInt(16));
 
     //Imprime a lista
     print("Lista Original: ${nums.join(" ; ")}");

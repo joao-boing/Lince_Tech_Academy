@@ -6,7 +6,7 @@ void main()
     Random random = new Random();
 
     //Declarando as variáveis
-    List<int> nums = List.generate(10, (_) => 1 + random.nextInt(101));
+    final List<int> nums = List.generate(10, (_) => 1 + random.nextInt(101));
 
     //imprimindo
     for(int i = 0; i < nums.length; i++)
