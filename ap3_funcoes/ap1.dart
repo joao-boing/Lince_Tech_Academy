@@ -20,10 +20,10 @@ void main()
   }
 
 //Método para imprimir lista
-void imprimirLista(List Lista)
+void imprimirLista(List? Lista)
   {
     //Se a lista for vazia, returna "Lista Vazia"
-    if(Lista.length == 0) print("Lista Vazia");
+    if(Lista == null || Lista.length == 0) print("Lista Vazia");
     //imprime a lista
     else print("Lista: ${Lista.join(", ")}");
   }
@@ -33,8 +33,6 @@ List somarListas(List? Lista1, List? Lista2)
   {
     //declarando a Lista3 a ser retornada
     var Lista3 = [];
-
-    //Verifica se uma das Listas é vazia, retorrna a Lista3 vazia
     if(Lista1 == null || Lista2 == null) return Lista3;
     //Verifica se a lenght das listas são diferentes, retorrna a Lista3 vazia
     if(Lista1.length != Lista2.length) return Lista3;
