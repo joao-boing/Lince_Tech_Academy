@@ -5,7 +5,7 @@ Random random = new Random();
 void main() 
   {
     //Declarando as variáveis
-    var temp = List.generate(15, (_) => 1 + random.nextInt(5001));
+    final temp = List.generate(15, (_) => 1 + random.nextInt(5001));
 
     //Percorre os valores de temp para imprimilos
     for(int num in temp)
@@ -25,7 +25,7 @@ String transformDecimal(numero)
 String transformBinario(int numero)
   {
     //Lista para guardar os restos das divisões
-    var resto = [];
+    final resto = [];
     //variavel temporaria
     int temp;
     //resultado guarda os elementos de 'resto' ao contrário
@@ -50,7 +50,7 @@ String transformBinario(int numero)
 String transformOctal(int numero)
   {
     //Lista para guardar os restos das divisões
-    var resto = [];
+    final resto = [];
     //variavel temporaria
     int temp;
     //resultado guarda os elementos de 'resto' ao contrário
@@ -74,7 +74,7 @@ String transformOctal(int numero)
 String transformHexadecimal(int numero)
   {
     //Lista para guardar os restos das divisões
-    var resto = [];
+    final resto = [];
     //variavel temporaria
     int temp;
     //resultado guarda os elementos de 'resto' ao contrário

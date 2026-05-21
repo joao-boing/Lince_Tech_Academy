@@ -19,7 +19,7 @@ void main()
 double calcArea(double numero)
   {
     //Equação de Cálculo de Área de Círculos
-    double resultado = pi * pow(numero, 2);
+    final double resultado = pi * pow(numero, 2);
     return resultado;
   }
 
@@ -27,6 +27,6 @@ double calcArea(double numero)
 double calcPerimetro(double numero)
   {
     //Equação de Cálculo de Perímetro de Círculos
-    double resultado = 2 * pi * numero;
+    final double resultado = 2 * pi * numero;
     return resultado;
   }
