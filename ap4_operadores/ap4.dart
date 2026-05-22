@@ -1,8 +1,8 @@
 void main()
   {
     //declarando as variáveis
-    var num1 = 9.54;
-    var num2 = 7.50;
+    final num1 = 9.54;
+    final num2 = 7.50;
 
     //imprimindo os valores e o desconto chamando a função verificarDesconto
     print("O produto custava $num1 reais, foi vendido a $num2 reais. O desconto foi de ${verificarDesconto(num1, num2)}%");
