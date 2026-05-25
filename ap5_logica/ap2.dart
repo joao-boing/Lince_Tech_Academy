@@ -14,7 +14,7 @@ void main()
       }
   }
 
-//Método para relacionar um número com a letra correspondente do alfabeto
+//Função para relacionar um número com a letra correspondente do alfabeto
 String letraAlfabeto(int num)
   {
     //Declarando as variáveis
