@@ -16,7 +16,6 @@ class Retangulo
     //Declarando as variáveis
     final double altura;
     final double largura;
-    late double area;
 
     //Construtor
     Retangulo(this.altura, this.largura);
