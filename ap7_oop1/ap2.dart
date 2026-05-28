@@ -13,7 +13,7 @@ void main()
 //Classe que representa um retângulo
 class Retangulo
   {
-    //Declarando as variáveis
+    //Declarando os atributos
     final double altura;
     final double largura;
 

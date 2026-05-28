@@ -27,7 +27,7 @@ void main()
 //classe de uma conta bancária
 class ContaBancaria
   {
-    //declarando as variáveis
+    //declarando os atributos
     final String titular;
     double saldo;
 

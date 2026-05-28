@@ -27,7 +27,7 @@ void main()
 //Classe que representa um produto
 class Produto
   {
-    //Declarando as variáveis
+    //Declarando os atributos
     late String nome;
     late double preco;
 
