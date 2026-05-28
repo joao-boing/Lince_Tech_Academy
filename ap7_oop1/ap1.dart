@@ -34,7 +34,7 @@ class ContaBancaria
     //construtor
     ContaBancaria(this.titular, this.saldo);
 
-    //Função depositar
+    //Método depositar
     void depositar(valor)
       {
         //verificar se o valor depositado é menor que 1 centavo, lança uma exception
@@ -43,7 +43,7 @@ class ContaBancaria
         print("Seu depósito foi concluído. Saldo: $saldo reais");
       }
 
-    //função sacar
+    //Método sacar
     void sacar(valor)
       {
         //verificar se o valor de saque é menor que o saldo atual, lança uma exception
