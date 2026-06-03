@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import '../ap3_funcoes/ap2.dart';
+var random = Random();
 
 void main() {
   //Instanciando o random
