@@ -1,0 +1,22 @@
+{
+  "configVersion": 2,
+  "packages": [
+    {
+      "name": "yaansi",
+      "rootUri": "file:///C:/Users/joaov/AppData/Local/Pub/Cache/hosted/pub.dev/yaansi-1.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "clima_lince_academy",
+      "rootUri": "../",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    }
+  ],
+  "generator": "pub",
+  "generatorVersion": "3.11.5",
+  "flutterRoot": "file:///C:/Users/joaov/flutter_windows_3.41.8-stable/flutter",
+  "flutterVersion": "3.41.8",
+  "pubCache": "file:///C:/Users/joaov/AppData/Local/Pub/Cache"
+}

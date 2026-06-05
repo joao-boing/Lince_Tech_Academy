@@ -1,0 +1,8 @@
+name: clima_lince_academy
+description: Projeto de avaliação de Dart - Relatório Climático.
+version: 1.0.0
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  yaansi: ^1.2.0

@@ -1,0 +1,21 @@
+{
+  "roots": [
+    "clima_lince_academy"
+  ],
+  "packages": [
+    {
+      "name": "clima_lince_academy",
+      "version": "1.0.0",
+      "dependencies": [
+        "yaansi"
+      ],
+      "devDependencies": []
+    },
+    {
+      "name": "yaansi",
+      "version": "1.2.0",
+      "dependencies": []
+    }
+  ],
+  "configVersion": 1
+}
