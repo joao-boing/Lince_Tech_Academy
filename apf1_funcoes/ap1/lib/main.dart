@@ -82,10 +82,15 @@ class PaginaDeCoresState extends State<PaginaDeCores> {
             ),
 
             //Botão
-            FloatingActionButton
-            (
+            ElevatedButton(
               onPressed: _sortearCor,
-              child: Icon(Icons.add),
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+              ),
+              child: const Text(
+                'Sortear cor',
+                style: TextStyle(fontSize: 18),
+              ),
             ),
           ],
         ),
