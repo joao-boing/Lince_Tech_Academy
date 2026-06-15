@@ -116,6 +116,7 @@ class MyWidget extends StatelessWidget {
     );
   }
   
+  //Método para construir um quadrado para evitar repetição
   Widget _buildQuadrado({required double top, required double left, required Color cor}) {
     return Positioned(
       top: top,
