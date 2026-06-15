@@ -5,11 +5,13 @@ import 'package:flutter/material.dart';
 //Cor principal de fundo
 const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
 
+//Main
 void main()
   {
     runApp(MyApp());
   }
 
+//Aplicativo
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -30,13 +32,19 @@ class MyApp extends StatelessWidget {
   }
 }
 
+//Tela principal
 class MyWidget extends StatelessWidget {
   const MyWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
+
+    //Container que vai conter o layout
     return Container(
+
+      //Margem
       margin: EdgeInsets.symmetric(vertical: 50, horizontal: 50),
+      
       child: Column(
         children: [
           Row(
