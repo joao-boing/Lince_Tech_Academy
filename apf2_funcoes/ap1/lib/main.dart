@@ -1,5 +1,8 @@
+//import de material
+
 import 'package:flutter/material.dart';
 
+//Cor principal de fundo
 const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
 
 void main()
