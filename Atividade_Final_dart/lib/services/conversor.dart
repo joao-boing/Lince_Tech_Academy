@@ -13,4 +13,7 @@ class Conversor
 
     //Direção do Vento
     static double grausParaRad(double graus) => graus * (pi / 180);
+
+    //Umidade
+    static double kgParaGramas(double umidade) => umidade * 1000;
   }

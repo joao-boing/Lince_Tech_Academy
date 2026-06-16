@@ -15,8 +15,8 @@
     }
   ],
   "generator": "pub",
-  "generatorVersion": "3.11.5",
-  "flutterRoot": "file:///C:/Users/joaov/flutter_windows_3.41.8-stable/flutter",
-  "flutterVersion": "3.41.8",
+  "generatorVersion": "3.12.1",
+  "flutterRoot": "file:///C:/src/flutter",
+  "flutterVersion": "3.44.1",
   "pubCache": "file:///C:/Users/joaov/AppData/Local/Pub/Cache"
 }

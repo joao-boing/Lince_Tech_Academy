@@ -7,7 +7,8 @@ class Exportador
   {
 
     //informa a pasta de sensores
-    final String pastaSensores = 'C:/clima/sensores';
+    final String pastaSensores = 'C:/clima/relatórios';
+    final pasta = Directory('C:/clima/relatórios');
     
     //Método para salvar o Relatório
     Future<void> salvarRelatorio
@@ -19,6 +20,18 @@ class Exportador
       {
         try 
           {
+            try
+              {
+                if(!await pasta.exists())
+                {
+                  await pasta.create(recursive: true);
+                }
+              }
+            catch (e)
+              {
+                print("Erro ao criar pasta: $e");
+              }
+
             // Cria a data e hora no formato: YYYY-MM-DD_HH-mm
             final agora = DateTime.now();
             final dataStr = '${agora.year}-${agora.month.toString().padLeft(2, '0')}-${agora.day.toString().padLeft(2, '0')}';

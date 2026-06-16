@@ -1,5 +1,6 @@
 //Imports de dart io e registroClima
 
+import 'dart:convert';
 import 'dart:io';
 import '../models/registroClima.dart';
 
@@ -59,11 +60,14 @@ class LeitorCsv
                   //Ano
                   int ano = int.parse(partes[1]);
 
-                  //Mes
-                  int mes = int.parse(partes[2]);
-
+                  // 1. Lê o arquivo como bytes puros (não quebra nunca)
+                  final bytes = await entidade.readAsBytes();
+    
+                  // 2. Converte para String ignorando/substituindo erros de conversão
+                  final conteudo = await const Utf8Decoder(allowMalformed: true).convert(bytes);
+                  
                   //Lê as linhas
-                  final linhas = await entidade.readAsLines();
+                  final linhas = await conteudo.split('\n');
 
                   // Pula se estiver vazio ou só com cabeçalho
                   if (linhas.length <= 1) continue;
@@ -82,7 +86,6 @@ class LeitorCsv
                             linha: linhas[i],
                             estado: estado,
                             ano: ano,
-                            mes: mes,
                           ));
                         } 
                       catch (_) 

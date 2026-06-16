@@ -289,16 +289,19 @@ Future<void> processarRelatorioUmidade(List<RegistroClima> dados, bool deveSalva
             //Atribui a Umidade média do ano
             double mediaAno = dadosAno.map((e) => e.umidade).reduce((a, b) => a + b) / dadosAno.length;
 
+
             //Atribui a Umidade máxima do ano
             double maxAno = dadosAno.map((e) => e.umidade).reduce((a, b) => a > b ? a : b);
 
             //Atribui a Umidade mínima do ano
             double minAno = dadosAno.map((e) => e.umidade).reduce((a, b) => a < b ? a : b);
 
+            
+
             buffer.writeln('   Ano: $ano');
-            buffer.writeln('    Média Anual:  ${mediaAno.toStringAsFixed(1)}%');
-            buffer.writeln('    Máxima Anual: ${maxAno.toStringAsFixed(1)}%');
-            buffer.writeln('    Mínima Anual: ${minAno.toStringAsFixed(1)}%');
+            buffer.writeln('    Média Anual:  ${Conversor.kgParaGramas(mediaAno).toStringAsFixed(2)} g/m³');
+            buffer.writeln('    Máxima Anual: ${Conversor.kgParaGramas(maxAno).toStringAsFixed(2)} g/m³');
+            buffer.writeln('    Mínima Anual: ${Conversor.kgParaGramas(minAno).toStringAsFixed(2)} g/m³');
 
             //Atribui os meses do ano
             final meses = dadosAno.map((e) => e.mes).toSet().toList()..sort();
@@ -320,9 +323,9 @@ Future<void> processarRelatorioUmidade(List<RegistroClima> dados, bool deveSalva
                 double minMes = dadosMes.map((e) => e.umidade).reduce((a, b) => a < b ? a : b);
 
                 buffer.writeln('     Mês: ${dadosMes.first.nomeMes}');
-                buffer.writeln('      Média Mensal:  ${mediaMes.toStringAsFixed(1)}%');
-                buffer.writeln('      Máxima Mensal: ${maxMes.toStringAsFixed(1)}%');
-                buffer.writeln('      Mínima Mensal: ${minMes.toStringAsFixed(1)}%');
+                buffer.writeln('      Média Mensal:  ${Conversor.kgParaGramas(mediaMes).toStringAsFixed(2)} g/m³');
+                buffer.writeln('      Máxima Mensal: ${Conversor.kgParaGramas(maxMes).toStringAsFixed(2)} g/m³');
+                buffer.writeln('      Mínima Mensal: ${Conversor.kgParaGramas(minMes).toStringAsFixed(2)} g/m³');
               }
           }
       }

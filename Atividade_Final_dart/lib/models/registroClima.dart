@@ -4,9 +4,11 @@ class RegistroClima
     final String estado;
     final int ano;
     final int mes;
+    final int dia;
     final int hora;
     final double temperatura;
     final double umidade;
+    final double densidadeDoAr;
     final double velocidadeVento;
     final double direcaoVento;
 
@@ -16,9 +18,11 @@ class RegistroClima
       required this.estado,
       required this.ano,
       required this.mes,
+      required this.dia,
       required this.hora,
       required this.temperatura,
       required this.umidade,
+      required this.densidadeDoAr,
       required this.velocidadeVento,
       required this.direcaoVento,
     });
@@ -29,7 +33,6 @@ class RegistroClima
       required String linha,
       required String estado,
       required int ano,
-      required int mes,
     }) 
       {
         final colunas = linha.split(',');
@@ -37,12 +40,14 @@ class RegistroClima
         (
           estado: estado,
           ano: ano,
-          mes: mes,
-          hora: int.parse(colunas[0]),
-          temperatura: double.parse(colunas[1]),
-          umidade: double.parse(colunas[2]),
-          velocidadeVento: double.parse(colunas[3]),
-          direcaoVento: double.parse(colunas[4]),
+          mes: int.parse(colunas[0]),
+          dia: int.parse(colunas[1]),
+          hora: int.parse(colunas[2]),
+          temperatura: double.parse(colunas[3]),
+          umidade: double.parse(colunas[4]),
+          densidadeDoAr: double.parse(colunas[5]),
+          velocidadeVento: double.parse(colunas[6]),
+          direcaoVento: double.parse(colunas[7]),
         );
       }
 
