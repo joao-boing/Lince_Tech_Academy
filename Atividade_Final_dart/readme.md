@@ -62,6 +62,6 @@ Os arquivos devem estar na pasta: `C:/clima/sensores`
 
 **Formato interno (a partir da segunda linha):**
 ```csv
-hora,temperatura,umidade,velocidadeVento,direcaoVento
-0,23.5,65,2.3,180
-1,22.8,68,1.8,190
+Mês,Dia,Hora,Temperatura {C},Umidade {kg/kg},Densidade do ar {kg/m3},Velocidade do Vento {m/s},Direção do Vento {graus}
+1,1,1,23.8,0.018474922,1.146,5,220
+1,1,2,23.1,0.01780543,1.151,2,210
