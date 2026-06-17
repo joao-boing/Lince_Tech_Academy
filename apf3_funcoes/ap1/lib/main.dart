@@ -1,11 +1,16 @@
+
+//Import de material
 import 'package:flutter/material.dart';
 
+//Cor do aplicativo padrão
 Color corPadrao = const Color.fromARGB(255, 10, 50, 125);
 
+//main
 void main() {
   runApp(const MyApp());
 }
 
+//Aplicativo
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -25,6 +30,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+//Tela do aplicativo
 class MyScreen extends StatefulWidget {
   const MyScreen({super.key});
 
@@ -33,38 +39,55 @@ class MyScreen extends StatefulWidget {
 }
 
 class _MyScreenState extends State<MyScreen> {
+  //Form
   final _formKey = GlobalKey<FormState>();
   
+  //Variável nome
   String _nome = '';
+
+  //Idade
   int _idade = 0;
+
+  //Ativo
   bool _ativo = false;
 
+  //Lista de usuários
   List<Usuario> lista = [];
 
+  //Método para salvar usuários na lista
   void salvarUsuario(String nome, int idade, bool ativo) {
     setState(() {
+      //Cria um usuário
       Usuario usuario = Usuario(nome, idade, ativo);
 
+      //Se o usuário exisitr na lista, seu valor é 1
+      //Se não é 2
       int indiceExistente = lista.indexWhere(
         (u) => u.nome.toLowerCase() == nome.toLowerCase()
       );
 
+      //Se ele existe, atualiza os dados
       if (indiceExistente >= 0) {
         lista[indiceExistente] = usuario;
         
         ScaffoldMessenger.of(context).showSnackBar(
+          //mensagem do scaffold
           const SnackBar(content: Text('Dados do usuário atualizados!')),
         );
+
+      //Se ele não existe, adiciona
       } else {
         lista.add(usuario);
         
         ScaffoldMessenger.of(context).showSnackBar(
+          //mensagem do scaffold
           const SnackBar(content: Text('Novo usuário cadastrado!')),
         );
       }
     });
   }
 
+  //Build
   @override
   Widget build(BuildContext context) {
     return Padding(
